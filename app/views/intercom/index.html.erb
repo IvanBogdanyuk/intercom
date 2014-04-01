@@ -30,23 +30,20 @@
       </div><!--/.nav-collapse -->
     </div>
   </div>
-  <div id="Cat">
-    <img src="http://cs614717.vk.me/v614717486/5cf0/2dHRpySOW8s.jpg" >
-  </div>
 
 
 
+<div id="Cat">
+  <img src="http://cs614717.vk.me/v614717486/5cf0/2dHRpySOW8s.jpg" >
+</div>
 
-
-<div id="ShowUsers">
+<div id="ShowUser">
 <p>
-  Name:
     <b>
       <%= @userWelcome %>
     </b>
 </p>
 <br>
-
 <b>Skills:</b>
 <br>
 <%if @skillsCurrent.count == 0 %>
@@ -58,6 +55,25 @@
     <% end %>
   <% end %>
 <% end %>
+</div>
+
+
+
+<div id="ShowUsers">
+<% @usersAll.each do |uAll| %>
+  <p>
+    <a><%= uAll %></a><br>
+    <% @step = UskillsTerc.where(id_users: uAll.id).select(:id_skills) %>
+    <% SkillsTerc.where(id: @step).each do |showSkillsUsers| %>
+      <q><%= showSkillsUsers.name %></q>
+    <% end %>
+  </p>
+<% end %>
+<br>
+</div>
+
+
+<div id="Find">
 </div>
 
 

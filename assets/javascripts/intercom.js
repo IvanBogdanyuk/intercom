@@ -1,6 +1,8 @@
 $(function() {
 
     $('#header').hide();
+    $('#ShowUser').hide();
+    $('#ShowUsers').hide();
 
     console.log($("#simpleText"));
     console.log("init");
@@ -13,16 +15,29 @@ $(function() {
             "Groups"    : "Groups"
         },    
         MyPage: function(path){
-            $("#Cat").html('<img src="http://cs614717.vk.me/v614717486/5cf0/2dHRpySOW8s.jpg" >');
+            $("#Cat").html('<img style="float:left" src="http://cs614717.vk.me/v614717486/5d0c/enig6oYGH-s.jpg" >');
+            $("#Cat").show();
+            $('#ShowUser').show();
+            $('#ShowUsers').hide();
         },
         Employers: function(path){
-            $("#Cat").html('<img src="http://cs614717.vk.me/v614717486/5d0c/enig6oYGH-s.jpg" >');
+            //$("#Cat").html('<img src="http://cs614717.vk.me/v614717486/5cf0/2dHRpySOW8s.jpg" >');
+            $("#Cat").hide();
+            $('#ShowUser').hide();
+            $('#ShowUsers').show();
+            //$("#Cat").load('skills');
         },        
         News: function(path){
             $("#Cat").html('<img src="http://cs614717.vk.me/v614717486/5d05/GQaqR2lfPjk.jpg" >');
+            $('#ShowUser').hide();
+            $("#Cat").hide();
+            $('#ShowUsers').hide();
         },
         Groups: function(path){
             $("#Cat").html('<img src="http://cs614717.vk.me/v614717486/5cf7/N0tlAwHRwI8.jpg" >');
+            $('#ShowUser').hide();
+            $("#Cat").hide();
+            $('#ShowUsers').hide();
         },
     });
 
